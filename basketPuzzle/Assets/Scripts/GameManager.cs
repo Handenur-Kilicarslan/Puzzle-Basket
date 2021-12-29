@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public enum Fruits { 
-    Apple, Orange, Papaya, Pear, WaterMelon, Fig
+    Apple, Orange, Papaya, Pear, Fig
 
     //state i randomize etmek tpecasting
     //whichFruit = (Fruits)Random.Range(0, 6);
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public GameObject AppleLevelBalls;
     public GameObject OrangeLevelBalls;
     public GameObject PearLevelBalls;
+    public GameObject FigLevelBalls;
 
     [Space(10)]
     [Header("Fruits UI Letters List")]
@@ -35,11 +36,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> AppleWordUI;
     public List<GameObject> OrangeWordUI;
     public List<GameObject> PearWordUI;
+    public List<GameObject> FigWordUI;
 
     [Header("Tap to Start Panels")]
     public GameObject AppleWordsPanel;
     public GameObject OrangeWordsPanel;
     public GameObject PearWordsPanel;
+    public GameObject FigWordsPanel;
 
     [Header("LEVEL INFO")]
     public GameObject rightSideBallsBarrier;
@@ -48,8 +51,10 @@ public class GameManager : MonoBehaviour
     public static List<char> AppleWord = new List<char> { 'A', 'P', 'P', 'L', 'E' };
     public static List<char> OrangeWord = new List<char> { 'O', 'R' , 'A', 'N', 'G', 'E'};
     public static List<char> PearWord = new List<char> { 'P', 'E', 'A', 'R' };
+    public static List<char> FigWord = new List<char> { 'F', 'I', 'G' };
 
     public GameObject fireWork;
+    public GameObject wrongBallParticle;
     public bool endGame = false;
     public bool panelControl = false;
     public bool AnotherBool = true;
@@ -78,6 +83,8 @@ public class GameManager : MonoBehaviour
         {
             case Fruits.Apple:
 
+                MakeTrueorFalse(endGame, false);
+
                 AppleLevelBalls.SetActive(true);
                 MainWord = AppleWord;
                 WordUI = AppleWordUI;
@@ -95,7 +102,9 @@ public class GameManager : MonoBehaviour
                     
                 }
                 break;
+
             case Fruits.Orange:
+
                 MakeTrueorFalse(endGame, false);
 
                 if (isNextLevelPressed)
@@ -119,11 +128,17 @@ public class GameManager : MonoBehaviour
                     SwichFruitStatus();
                 }
                 break;
+
             case Fruits.Papaya:
                 break;
+
             case Fruits.Pear:
 
                 MakeTrueorFalse(endGame, false);
+
+
+                PearLevelBalls.SetActive(true);
+
                 if (isNextLevelPressed)
                 {
                     PearLevelBalls.SetActive(true);
@@ -138,22 +153,41 @@ public class GameManager : MonoBehaviour
                 {
                     PearWordsPanel.SetActive(false);
                     PearLevelBalls.SetActive(false);
-                    panelControl = false;
+
                     UýManager.instance.PearWordsPanel.SetActive(false);
+
+                    MakeBooleanThings();
+                    SwichFruitStatus();
+                }
+                break;
+
+            case Fruits.Fig:
+
+                MakeTrueorFalse(endGame, false);
+
+                if (isNextLevelPressed)
+                {
+                    FigLevelBalls.SetActive(true);
+                    isNextLevelPressed = false;
+                }
+
+                MainWord = FigWord;
+                WordUI = FigWordUI;
+                diziBoyut = MainWord.Count;
+
+                if(panelControl && AnotherBool)
+                {
+                    FigWordsPanel.SetActive(false);
+                    PearLevelBalls.SetActive(false);
+
+                    UýManager.instance.FigWordsPanel.SetActive(false);
 
 
                     MakeBooleanThings();
                     SwichFruitStatus();
-
+                    
                 }
 
-
-                break;
-
-            case Fruits.WaterMelon:
-                break;
-
-            case Fruits.Fig:
                 break;
         }
 
@@ -165,10 +199,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Win Fonksiyonu;");
         panelControl = true;
         StartCoroutine(PanelOpening()); //win uý açar
-
         //Daha sonra butona basarak next level eski fonksiyonunu çalýþtýrýyor 
     }
-
 
     public void NextLevelEski() //buton
     {
@@ -177,7 +209,6 @@ public class GameManager : MonoBehaviour
 
         AnotherBool = true;
         isNextLevelPressed = true;
-
     }
 
 
@@ -208,7 +239,11 @@ public class GameManager : MonoBehaviour
         }
         else if(whichFruit == Fruits.Pear)
         {
-            Debug.Log("--------------------------------PEARDAYIM GEÇEYÝM MÝ------------------------------------------");
+            Debug.Log("-------- Pear -> Fig ------");
+            whichFruit = Fruits.Fig;
+
+            AnotherBool = false;
+            return;
         }
        
 
@@ -227,16 +262,11 @@ public class GameManager : MonoBehaviour
     {
         UýManager.instance.FaiUI();
     }
+
     public void NextLevel()
     {
         UýManager.instance.WinUI();
         whichFruit = (Fruits)Random.Range(0, 6); // rastgele meyve döndürmeli
-
-    }
-    public void Restart()
-    {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        whichFruit = Fruits.Orange;
     }
 
     void MakeBooleanThings()

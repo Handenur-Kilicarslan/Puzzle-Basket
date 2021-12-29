@@ -17,15 +17,19 @@ public class UıManager : MonoBehaviour
     public GameObject AppleWordsPanel;
     public GameObject OrangeWordsPanel;
     public GameObject PearWordsPanel;
+    public GameObject FigWordsPanel;
+    
 
     [Header("Tap To Start Panels")]
     public GameObject whatIsApple;
     public GameObject whatIsOrange;
     public GameObject whatIsPear;
+    public GameObject whatIsFig;
 
 
     void Start()
     {
+        ArrangePanels();
         startPanel.SetActive(true);
         playPanel.SetActive(false);
         failPanel.SetActive(false);
@@ -44,22 +48,7 @@ public class UıManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.whichFruit == Fruits.Apple)
-        {
-            startPanel = whatIsApple;
-            playPanel = AppleWordsPanel;
-            
-        }
-        else if (GameManager.instance.whichFruit == Fruits.Orange)
-        {
-            startPanel = whatIsOrange;
-            playPanel = OrangeWordsPanel;
-        }
-        else if(GameManager.instance.whichFruit == Fruits.Pear)
-        {
-            startPanel = whatIsPear;
-            playPanel = PearWordsPanel;
-        }
+        ArrangePanels();
     }
 
     public void TapToStartUI()
@@ -84,7 +73,31 @@ public class UıManager : MonoBehaviour
     {
         Debug.Log("wİNPANELİ KAPATMIYOR MUSUN");
         winPanel.SetActive(false);
-       // playPanel.SetActive(true);
-       startPanel.SetActive(true);
+        startPanel.SetActive(true);
+    }
+
+    public void ArrangePanels()
+    {
+
+        if (GameManager.instance.whichFruit == Fruits.Apple)
+        {
+            startPanel = whatIsApple;
+            playPanel = AppleWordsPanel;
+        }
+        else if (GameManager.instance.whichFruit == Fruits.Orange)
+        {
+            startPanel = whatIsOrange;
+            playPanel = OrangeWordsPanel;
+        }
+        else if (GameManager.instance.whichFruit == Fruits.Pear)
+        {
+            startPanel = whatIsPear;
+            playPanel = PearWordsPanel;
+        }
+        else if (GameManager.instance.whichFruit == Fruits.Fig)
+        {
+            startPanel = whatIsFig;
+            playPanel = FigWordsPanel;
+        }
     }
 }

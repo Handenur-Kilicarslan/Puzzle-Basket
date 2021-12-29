@@ -58,11 +58,7 @@ public class GameManager2 : MonoBehaviour
 
                 gameArea = Instantiate(levels[whichLevel].LevelObj, new Vector3(-57.03f, -6.81f, 963.0879f), Quaternion.identity);
 
-
                 status = GameStatus.initalize;
-
-
-
 
 
                 break;

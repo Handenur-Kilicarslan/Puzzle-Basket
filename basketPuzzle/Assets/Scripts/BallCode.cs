@@ -12,6 +12,7 @@ public class BallCode : MonoBehaviour
 
     [Header("Basket Informations")]
     public GameObject fireWork;
+    private GameObject wrongBallParticle;
     public bool isBottomPartTouched = false;
     public bool isUpperPartTouched = false;
 
@@ -21,6 +22,7 @@ public class BallCode : MonoBehaviour
     private GameObject child;
     private Rigidbody rb;
     private MeshRenderer mr;
+    private TrailRenderer trailRenderer;
 
     int n;
     private bool controlBool = true;
@@ -31,10 +33,14 @@ public class BallCode : MonoBehaviour
     {
         GameManager.instance.endGame = false;
         fireWork = GameManager.instance.fireWork;
+        wrongBallParticle = GameManager.instance.wrongBallParticle;
         child = transform.GetChild(0).gameObject;
+
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
+
         mr = GetComponent<MeshRenderer>();
+        trailRenderer = GetComponent<TrailRenderer>();
         bottomBasketBarrier = GameObject.FindGameObjectWithTag("BottomBasketBarrier");
         isUpperPartTouched = false;
         isBottomPartTouched = false;
@@ -50,7 +56,9 @@ public class BallCode : MonoBehaviour
             GameManager.instance.flipMovement.enabled = true;
             rb.isKinematic = false;
         }
+
         n = GameManager.diziBoyut;
+
         if (enableBallCode == true)
         {
             Debug.Log("My Letter is : " + Letter);
@@ -83,6 +91,7 @@ public class BallCode : MonoBehaviour
                     }
                     else
                     {
+                        StartCoroutine(WrongBall());
                         Debug.Log("Farklý bir harf else e kaç kere giriyor");
                     }
 
@@ -150,10 +159,18 @@ public class BallCode : MonoBehaviour
         yield return new WaitForSeconds(1f);
         gonnaChange = false;
     }
+    public IEnumerator WrongBall()
+    {
+        yield return new WaitForSeconds(0.4f);
+
+        GameObject e = Instantiate(wrongBallParticle) as GameObject;
+        e.transform.position = transform.position;
+    }
     public IEnumerator CloseMeshAndGetBall(MeshRenderer mr)
     {
         yield return new WaitForSeconds(.5f);
         mr.enabled = false;
+        trailRenderer.enabled = false;
         Destroy(child);
         yield return new WaitForSeconds(1.5f);
         GameManager.instance.rightSideBallsBarrier.GetComponent<BoxCollider>().isTrigger = true;
