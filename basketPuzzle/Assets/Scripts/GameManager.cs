@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject playPanel;
     [Space(10)]
 
-
+    public int GoldCount;
 
     [Space(10)]
     [Header("Level Fruits")]
@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
 
                 if (panelControl && AnotherBool)
                 {
+                    GoldCount += 50;
                     AppleWordsPanel.SetActive(false);
                     AppleLevelBalls.SetActive(false);
 
@@ -119,6 +120,7 @@ public class GameManager : MonoBehaviour
 
                 if (panelControl && AnotherBool)
                 {
+                    GoldCount += 50;
                     OrangeWordsPanel.SetActive(false);
                     OrangeLevelBalls.SetActive(false);
 
@@ -151,6 +153,8 @@ public class GameManager : MonoBehaviour
 
                 if (panelControl && AnotherBool)
                 {
+
+                    GoldCount += 50;
                     PearWordsPanel.SetActive(false);
                     PearLevelBalls.SetActive(false);
 
@@ -177,6 +181,8 @@ public class GameManager : MonoBehaviour
 
                 if(panelControl && AnotherBool)
                 {
+
+                    GoldCount += 50;
                     FigWordsPanel.SetActive(false);
                     PearLevelBalls.SetActive(false);
 
@@ -209,6 +215,10 @@ public class GameManager : MonoBehaviour
 
         AnotherBool = true;
         isNextLevelPressed = true;
+        if(whichFruit == Fruits.Fig && endGame)
+        {
+            Application.Quit();
+        }
     }
 
 

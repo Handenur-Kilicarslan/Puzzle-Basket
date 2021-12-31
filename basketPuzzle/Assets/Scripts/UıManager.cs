@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // SORU İŞARETLİ PANELLERİ EKLE
 //tap to start pear orange falan
 
 public class UıManager : MonoBehaviour
 {
+
+    [Header("Golds")]
+    public Text GoldText;
+
     [Header("Panels")]
     public GameObject startPanel;
     public GameObject playPanel;
@@ -49,6 +54,7 @@ public class UıManager : MonoBehaviour
     private void Update()
     {
         ArrangePanels();
+        GoldText.text = GameManager.instance.GoldCount.ToString();
     }
 
     public void TapToStartUI()
@@ -73,6 +79,9 @@ public class UıManager : MonoBehaviour
     {
         Debug.Log("wİNPANELİ KAPATMIYOR MUSUN");
         winPanel.SetActive(false);
+
+        ArrangePanels();
+        Debug.Log("Start panel burda açılmalı " + startPanel);
         startPanel.SetActive(true);
     }
 
