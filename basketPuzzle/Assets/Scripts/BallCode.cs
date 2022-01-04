@@ -42,6 +42,9 @@ public class BallCode : MonoBehaviour
         mr = GetComponent<MeshRenderer>();
         trailRenderer = GetComponent<TrailRenderer>();
         bottomBasketBarrier = GameObject.FindGameObjectWithTag("BottomBasketBarrier");
+
+        bottomBasketBarrier.GetComponent<BoxCollider>().isTrigger = false;
+
         isUpperPartTouched = false;
         isBottomPartTouched = false;
 
@@ -67,6 +70,7 @@ public class BallCode : MonoBehaviour
             if (isUpperPartTouched && isBottomPartTouched)
             {
                 Debug.Log("------------------BASKET------------------------------");
+              
                 isBasket = true;
                 StartCoroutine(CloseMeshAndGetBall(mr));
 
@@ -76,11 +80,8 @@ public class BallCode : MonoBehaviour
                 {
                     if (GameManager.MainWord[i] == Letter)
                     {
-                       // fireWork.transform.position = transform.position;
-                       // fireWork.GetComponent<ParticleSystem>().Play();
 
-                        GameObject e = Instantiate(fireWork) as GameObject;
-                        e.transform.position = transform.position;
+                        StartCoroutine(BasketParticlePlay());
 
                        // Debug.Log("letter " + i + " = " + GameManager.MainWord[i]);
                        
@@ -102,6 +103,7 @@ public class BallCode : MonoBehaviour
             }
 
         }
+
 
         if (GameManager.diziBoyut <= 0 && controlBool==true)
         {
@@ -132,23 +134,28 @@ public class BallCode : MonoBehaviour
         
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "EnableBallCode") //FOR START EVERTH�NG
         {
             enableBallCode = true;
             isUpperPartTouched = false;
             isBottomPartTouched = false;
+
+            bottomBasketBarrier.GetComponent<BoxCollider>().isTrigger = false;
         }
         if (other.gameObject.tag == "BasketScore")
         {
             isUpperPartTouched = true;
+
+            bottomBasketBarrier.GetComponent<BoxCollider>().isTrigger = true;
         }
+
         if (other.gameObject.tag == "BottomBasketBarrier")
         {
             isBottomPartTouched = true;
+
         }
-        
     }
 
 
@@ -161,14 +168,14 @@ public class BallCode : MonoBehaviour
     }
     public IEnumerator WrongBall()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.65f);
 
         GameObject e = Instantiate(wrongBallParticle) as GameObject;
         e.transform.position = transform.position;
     }
     public IEnumerator CloseMeshAndGetBall(MeshRenderer mr)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.65f);
         mr.enabled = false;
         trailRenderer.enabled = false;
         Destroy(child);
@@ -185,7 +192,13 @@ public class BallCode : MonoBehaviour
         GameManager.instance.rightSideBallsBarrier.GetComponent<BoxCollider>().isTrigger = true;
         yield return new WaitForSeconds(.4f);
         GameManager.instance.rightSideBallsBarrier.GetComponent<BoxCollider>().isTrigger = false;
+    }
 
+    public IEnumerator BasketParticlePlay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GameObject e = Instantiate(fireWork) as GameObject;
+        e.transform.position = transform.position;
     }
 
     

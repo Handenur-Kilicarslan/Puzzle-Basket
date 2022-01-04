@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     public GameObject rightSideBallsBarrier;
     public static int diziBoyut = 1;
     public static List<char> MainWord;
-    public static List<char> AppleWord = new List<char> { 'A', 'P', 'P', 'L', 'E' };
+    public static List<char> AppleWord = new List<char> { 'A', 'P', 'X', 'L', 'E' };
     public static List<char> OrangeWord = new List<char> { 'O', 'R' , 'A', 'N', 'G', 'E'};
     public static List<char> PearWord = new List<char> { 'P', 'E', 'A', 'R' };
     public static List<char> FigWord = new List<char> { 'F', 'I', 'G' };
@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Application.targetFrameRate = 60;
     }
 
     void Update()
