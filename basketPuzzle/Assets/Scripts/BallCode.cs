@@ -53,7 +53,7 @@ public class BallCode : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Input.GetMouseButtonDown(0) && GameManager.instance.endGame != true && GameManager.instance.panelControl == false)
+        if (Input.GetMouseButtonDown(0) && GameManager.instance.endGame != true && GameManager.instance.panelControl == false)
         {
             UIManager.instance.TapToStartUI();
             GameManager.instance.flipMovement.enabled = true;
@@ -66,11 +66,11 @@ public class BallCode : MonoBehaviour
         {
             Debug.Log("My Letter is : " + Letter);
             n = GameManager.diziBoyut;
-            
+
             if (isUpperPartTouched && isBottomPartTouched)
             {
                 Debug.Log("------------------BASKET------------------------------");
-              
+
                 isBasket = true;
                 StartCoroutine(CloseMeshAndGetBall(mr));
 
@@ -81,10 +81,13 @@ public class BallCode : MonoBehaviour
                     if (GameManager.MainWord[i] == Letter)
                     {
 
-                        StartCoroutine(BasketParticlePlay());
+                        //StartCoroutine(BasketParticlePlay());
 
-                       // Debug.Log("letter " + i + " = " + GameManager.MainWord[i]);
-                       
+                        GameObject e = Instantiate(fireWork) as GameObject;
+                        e.transform.position = transform.position;
+
+                        // Debug.Log("letter " + i + " = " + GameManager.MainWord[i]);
+
                         GameManager.instance.WordUI[i].SetActive(true);
                         GameManager.MainWord.RemoveAt(i);
                         GameManager.instance.WordUI.RemoveAt(i);
@@ -105,25 +108,16 @@ public class BallCode : MonoBehaviour
         }
 
 
-        if (GameManager.diziBoyut <= 0 && controlBool==true)
+        if (GameManager.diziBoyut <= 0 && controlBool == true)
         {
-            enableBallCode = false;
-            GameManager.instance.endGame = true;
-            GameManager.instance.AnotherBool = true;
-
-            GameManager.instance.rightSideBallsBarrier.GetComponent<BoxCollider>().isTrigger = false;
-            
-            Debug.Log("T�M HARFLER� TAMAMLADIN! boyut" + GameManager.diziBoyut);
-
-            GameManager.instance.Win();
-            controlBool = false; // butona t�klay�nca false olsun
+            StartCoroutine(WinState());
         }
 
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Border" && isBasket == false)
+        if (collision.gameObject.tag == "Border" && isBasket == false)
         {
             isUpperPartTouched = false;
             isBottomPartTouched = false;
@@ -131,12 +125,12 @@ public class BallCode : MonoBehaviour
             StartCoroutine(JustBarrierOpening());
             //GameManager.instance.Restart();
         }
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "EnableBallCode") //FOR START EVERTH�NG
+        if (other.gameObject.tag == "EnableBallCode") //FOR START EVERTH�NG
         {
             enableBallCode = true;
             isUpperPartTouched = false;
@@ -150,11 +144,13 @@ public class BallCode : MonoBehaviour
 
             bottomBasketBarrier.GetComponent<BoxCollider>().isTrigger = true;
         }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
         if (other.gameObject.tag == "BottomBasketBarrier")
         {
             isBottomPartTouched = true;
-
         }
     }
 
@@ -168,14 +164,14 @@ public class BallCode : MonoBehaviour
     }
     public IEnumerator WrongBall()
     {
-        yield return new WaitForSeconds(0.65f);
+        yield return new WaitForSeconds(0.55f);
 
         GameObject e = Instantiate(wrongBallParticle) as GameObject;
         e.transform.position = transform.position;
     }
     public IEnumerator CloseMeshAndGetBall(MeshRenderer mr)
     {
-        yield return new WaitForSeconds(.65f);
+        yield return new WaitForSeconds(.55f);
         mr.enabled = false;
         trailRenderer.enabled = false;
         Destroy(child);
@@ -196,12 +192,27 @@ public class BallCode : MonoBehaviour
 
     public IEnumerator BasketParticlePlay()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.25f);
         GameObject e = Instantiate(fireWork) as GameObject;
         e.transform.position = transform.position;
     }
 
-    
+    public IEnumerator WinState()
+    {
+        GameManager.instance.rightSideBallsBarrier.GetComponent<BoxCollider>().isTrigger = false;
+
+        yield return new WaitForSeconds(1f);
+        enableBallCode = false;
+        GameManager.instance.endGame = true;
+        GameManager.instance.AnotherBool = true;
+
+      
+        Debug.Log("T�M HARFLER� TAMAMLADIN! boyut" + GameManager.diziBoyut);
+
+        GameManager.instance.Win();
+        controlBool = false; // butona t�klay�nca false olsun
+    }
+
 }
 
 
