@@ -48,11 +48,11 @@ public class BallCode : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(Input.GetMouseButtonDown(0) && GameManager.instance.endGame != true && GameManager.instance.panelControl == false)
         {
-            UýManager.instance.TapToStartUI();
+            UIManager.instance.TapToStartUI();
             GameManager.instance.flipMovement.enabled = true;
             rb.isKinematic = false;
         }
@@ -70,7 +70,7 @@ public class BallCode : MonoBehaviour
                 isBasket = true;
                 StartCoroutine(CloseMeshAndGetBall(mr));
 
-                //ball ýn mesh rendererini kapat
+                //ball ï¿½n mesh rendererini kapat
                 n = GameManager.diziBoyut;
                 for (int i = 0; i < n; i++)
                 {
@@ -92,7 +92,7 @@ public class BallCode : MonoBehaviour
                     else
                     {
                         StartCoroutine(WrongBall());
-                        Debug.Log("Farklý bir harf else e kaç kere giriyor");
+                        Debug.Log("Farklï¿½ bir harf else e kaï¿½ kere giriyor");
                     }
 
                 }
@@ -111,10 +111,10 @@ public class BallCode : MonoBehaviour
 
             GameManager.instance.rightSideBallsBarrier.GetComponent<BoxCollider>().isTrigger = false;
             
-            Debug.Log("TÜM HARFLERÝ TAMAMLADIN! boyut" + GameManager.diziBoyut);
+            Debug.Log("Tï¿½M HARFLERï¿½ TAMAMLADIN! boyut" + GameManager.diziBoyut);
 
             GameManager.instance.Win();
-            controlBool = false; // butona týklayýnca false olsun
+            controlBool = false; // butona tï¿½klayï¿½nca false olsun
         }
 
     }
@@ -134,7 +134,7 @@ public class BallCode : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "EnableBallCode") //FOR START EVERTHÝNG
+        if(other.gameObject.tag == "EnableBallCode") //FOR START EVERTHï¿½NG
         {
             enableBallCode = true;
             isUpperPartTouched = false;
@@ -188,14 +188,7 @@ public class BallCode : MonoBehaviour
 
     }
 
-    void yazdýr()
-    {
-        int k = GameManager.diziBoyut;
-        for (int i = 0; i < k; i++)
-        {
-            Debug.Log("letter " + i + " = " + GameManager.MainWord[i]);
-        }
-    }
+    
 }
 
 
@@ -203,7 +196,7 @@ public class BallCode : MonoBehaviour
 /*
             for (int i = 0; i < n; i++)
             {
-                Debug.Log("dýþ letter " + i + " = " + GameManager.MainWord[i]);
+                Debug.Log("dï¿½ï¿½ letter " + i + " = " + GameManager.MainWord[i]);
 
             }
             Debug.Log(" 0. indis " + GameManager.MainWord[0] + " 1. indis " + GameManager.MainWord[1] + " 2. indis " + GameManager.MainWord[2]);

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // SORU İŞARETLİ PANELLERİ EKLE
 //tap to start pear orange falan
 
-public class UıManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
 
     [Header("Golds")]
@@ -45,7 +45,7 @@ public class UıManager : MonoBehaviour
         PearWordsPanel.SetActive(false);
     }
 
-    public static UıManager instance;
+    public static UIManager instance;
     private void Awake()
     {
         instance = this;

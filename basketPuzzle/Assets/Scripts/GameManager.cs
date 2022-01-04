@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
                     AppleWordsPanel.SetActive(false);
                     AppleLevelBalls.SetActive(false);
 
-                    UýManager.instance.AppleWordsPanel.SetActive(false);
+                    UIManager.instance.AppleWordsPanel.SetActive(false);
 
                     MakeBooleanThings();
                     SwichFruitStatus();
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
                     OrangeWordsPanel.SetActive(false);
                     OrangeLevelBalls.SetActive(false);
 
-                    UýManager.instance.OrangeWordsPanel.SetActive(false);
+                    UIManager.instance.OrangeWordsPanel.SetActive(false);
 
                     MakeBooleanThings();
                     SwichFruitStatus();
@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour
                     PearWordsPanel.SetActive(false);
                     PearLevelBalls.SetActive(false);
 
-                    UýManager.instance.PearWordsPanel.SetActive(false);
+                    UIManager.instance.PearWordsPanel.SetActive(false);
 
                     MakeBooleanThings();
                     SwichFruitStatus();
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
                     FigWordsPanel.SetActive(false);
                     PearLevelBalls.SetActive(false);
 
-                    UýManager.instance.FigWordsPanel.SetActive(false);
+                    UIManager.instance.FigWordsPanel.SetActive(false);
 
 
                     MakeBooleanThings();
@@ -204,14 +204,14 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Win Fonksiyonu;");
         panelControl = true;
-        StartCoroutine(PanelOpening()); //win uý açar
-        //Daha sonra butona basarak next level eski fonksiyonunu çalýþtýrýyor 
+        StartCoroutine(PanelOpening()); //win uï¿½ aï¿½ar
+        //Daha sonra butona basarak next level eski fonksiyonunu ï¿½alï¿½ï¿½tï¿½rï¿½yor 
     }
 
     public void NextLevelEski() //buton
     {
         Debug.Log("next level eski fonksiyonu");
-        UýManager.instance.NextLevelUI();
+        UIManager.instance.NextLevelUI();
 
         AnotherBool = true;
         isNextLevelPressed = true;
@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator PanelOpening()
     {
         yield return new WaitForSeconds(1f);
-        UýManager.instance.WinUI();
+        UIManager.instance.WinUI();
     }
     
 
@@ -270,13 +270,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        UýManager.instance.FaiUI();
+        UIManager.instance.FaiUI();
     }
 
     public void NextLevel()
     {
-        UýManager.instance.WinUI();
-        whichFruit = (Fruits)Random.Range(0, 6); // rastgele meyve döndürmeli
+        UIManager.instance.WinUI();
+        whichFruit = (Fruits)Random.Range(0, 6); // rastgele meyve dï¿½ndï¿½rmeli
     }
 
     void MakeBooleanThings()
