@@ -23,7 +23,7 @@ public class PotaMovement : MonoBehaviour
     {
         if(BallCode.isBasket == true)
         {
-            yEkseni = Random.Range(4.3f, 8f);
+            yEkseni = Random.Range(4.3f, 7.5f);
             yEkseni2 = Random.Range(4.3f, 6f);
             direction = Random.Range(0, 5);
 

@@ -82,6 +82,7 @@ public class BallCode : MonoBehaviour
                     {
 
                         //StartCoroutine(BasketParticlePlay());
+                        Handheld.Vibrate();
 
                         GameObject e = Instantiate(fireWork) as GameObject;
                         e.transform.position = transform.position;
@@ -121,7 +122,7 @@ public class BallCode : MonoBehaviour
         {
             isUpperPartTouched = false;
             isBottomPartTouched = false;
-            transform.position = new Vector3(3.48f, 12f, -0.17f);
+            transform.position = new Vector3(3.2f, 11f, -0.71f);
             StartCoroutine(JustBarrierOpening());
             //GameManager.instance.Restart();
         }

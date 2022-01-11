@@ -140,7 +140,6 @@ public class GameManager : MonoBehaviour
                 MakeTrueorFalse(endGame, false);
 
 
-                PearLevelBalls.SetActive(true);
 
                 if (isNextLevelPressed)
                 {
@@ -216,10 +215,12 @@ public class GameManager : MonoBehaviour
 
         AnotherBool = true;
         isNextLevelPressed = true;
+        /*
         if(whichFruit == Fruits.Fig && endGame)
         {
             Application.Quit();
         }
+        */
     }
 
 
