@@ -157,3 +157,188 @@ Received Import Request.
 Start importing Assets/Buket/Materials/tube.mat using Guid(c0f69708b80c62d4e87c847f721661a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5273e19cb76f2531878500b95d8571b1') in 0.011266 seconds 
   Import took 0.014031 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 180.144361 seconds.
+  path: Assets/Buket/Sprites/KöşeliŞerit.png
+  artifactKey: Guid(0a098a88f1d8c3e43920e6103ad74966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/Sprites/KöşeliŞerit.png using Guid(0a098a88f1d8c3e43920e6103ad74966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc47604611f1355082f7f72e1e2b4306') in 0.036823 seconds 
+  Import took 0.039749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.467986 seconds.
+  path: Assets/Buket/Sprites/KöşeliŞerit.png
+  artifactKey: Guid(0a098a88f1d8c3e43920e6103ad74966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/Sprites/KöşeliŞerit.png using Guid(0a098a88f1d8c3e43920e6103ad74966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e3bbbc39e9162b328ba027025334ee') in 0.038009 seconds 
+  Import took 0.041242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 193.907464 seconds.
+  path: Assets/import buket/papaya.png
+  artifactKey: Guid(bf49a246fe2c7454f87bebfd12de1506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/import buket/papaya.png using Guid(bf49a246fe2c7454f87bebfd12de1506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df6833c1c4886fb6ff4de8eb06564882') in 0.033061 seconds 
+  Import took 0.036195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.962229 seconds.
+  path: Assets/import buket/fig.png
+  artifactKey: Guid(83445d7e770ec314788c45ce6ac3a6cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/import buket/fig.png using Guid(83445d7e770ec314788c45ce6ac3a6cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af8823cb3efcc35ce126a072015a8dc7') in 0.058181 seconds 
+  Import took 0.061521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.260780 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFXFree Demo Logo.png
+  artifactKey: Guid(c474936d3f7aa204d8939cbe05170aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFXFree Demo Logo.png using Guid(c474936d3f7aa204d8939cbe05170aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046e4f1618ef69a29e5ca16cd8f18cba') in 0.019444 seconds 
+  Import took 0.021913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001911 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFXFree Demo Logo.png
+  artifactKey: Guid(c474936d3f7aa204d8939cbe05170aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFXFree Demo Logo.png using Guid(c474936d3f7aa204d8939cbe05170aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046e4f1618ef69a29e5ca16cd8f18cba') in 0.007382 seconds 
+  Import took 0.010354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031747 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX4 Demo Logo.png
+  artifactKey: Guid(db8ec42c9f48282458fe93cfc5f48a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX4 Demo Logo.png using Guid(db8ec42c9f48282458fe93cfc5f48a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3626aa566b06ca1255cf0cf3676ee5be') in 0.016620 seconds 
+  Import took 0.018904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.196338 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX3 Demo Logo.png
+  artifactKey: Guid(18a39eb748b6d664eb57f4b97b68bef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX3 Demo Logo.png using Guid(18a39eb748b6d664eb57f4b97b68bef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46070f0174674b5b869af9cef4b6147') in 0.018604 seconds 
+  Import took 0.021382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.040139 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX2 Demo Logo.png
+  artifactKey: Guid(5bd23007d5e4e2b48ad7618f94328601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX2 Demo Logo.png using Guid(5bd23007d5e4e2b48ad7618f94328601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe361d86981ffe52e01c5e906e2fda5d') in 0.013644 seconds 
+  Import took 0.016307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.254904 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX1 Demo Logo.png
+  artifactKey: Guid(f7c98b268308d794b8148d0c2914372d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX1 Demo Logo.png using Guid(f7c98b268308d794b8148d0c2914372d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1059caa0154291a58e82bb39153e16d8') in 0.016281 seconds 
+  Import took 0.018733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.038490 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX Demo Btn SlowMo H.png
+  artifactKey: Guid(48624f05b683e4a4ab1a142e40fd6971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX Demo Btn SlowMo H.png using Guid(48624f05b683e4a4ab1a142e40fd6971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '462cee66e173a1996c6cbb503c2d853b') in 0.015134 seconds 
+  Import took 0.017421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.868664 seconds.
+  path: Assets/import buket/pear.png
+  artifactKey: Guid(c2ee82f3c9f11b24f9306ccff42a2c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/import buket/pear.png using Guid(c2ee82f3c9f11b24f9306ccff42a2c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebac4beddbf9c1fed6a1e0a8348b5d6a') in 0.040852 seconds 
+  Import took 0.043550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 633.378327 seconds.
+  path: Packages/com.unity.ugui/Runtime/UnityEngine.UI.asmdef
+  artifactKey: Guid(2bafac87e7f4b9b418d9448d219b01ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/UnityEngine.UI.asmdef using Guid(2bafac87e7f4b9b418d9448d219b01ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13113e9364e6a0fa363eadb8296f871e') in 0.008719 seconds 
+  Import took 0.012635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.358857 seconds.
+  path: Packages/com.unity.ugui/package.json
+  artifactKey: Guid(319b8889f363f5947acf209c17a94149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/package.json using Guid(319b8889f363f5947acf209c17a94149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d1f12f0f4420a8b9dea50868bbb5d0') in 0.013730 seconds 
+  Import took 0.016823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.007193 seconds.
+  path: Assets/Buket/Sprites/KöşeliŞerit2.png
+  artifactKey: Guid(e65bc535ce2977646b6582166e429f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/Sprites/KöşeliŞerit2.png using Guid(e65bc535ce2977646b6582166e429f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e4ffc95682bf758886f7e6666a85e00') in 0.019803 seconds 
+  Import took 0.023094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011646 seconds.
+  path: Assets/Buket/Sprites/KöşeliŞerit2.png
+  artifactKey: Guid(e65bc535ce2977646b6582166e429f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/Sprites/KöşeliŞerit2.png using Guid(e65bc535ce2977646b6582166e429f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e4ffc95682bf758886f7e6666a85e00') in 0.007132 seconds 
+  Import took 0.009770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.532685 seconds.
+  path: Assets/Buket/Sprites/KöşeliŞerit2.png
+  artifactKey: Guid(e65bc535ce2977646b6582166e429f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/Sprites/KöşeliŞerit2.png using Guid(e65bc535ce2977646b6582166e429f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aedb7b377d9e23cf924d38d4776a3c4') in 0.016481 seconds 
+  Import took 0.019790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2085.860371 seconds.
+  path: Assets/Buket/obje
+  artifactKey: Guid(f48acf7476279224db8a7940c5a60728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/obje using Guid(f48acf7476279224db8a7940c5a60728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '138f6cee3dc695e80024bb6ce47c7464') in 0.005742 seconds 
+  Import took 0.008328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.083054 seconds.
+  path: Assets/Buket/obje/basketball.fbx
+  artifactKey: Guid(5ae444d37fbcaf44bb086d5ef9431462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/obje/basketball.fbx using Guid(5ae444d37fbcaf44bb086d5ef9431462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43f5d4b24c2b9371aece0c410cee7fb') in 0.167869 seconds 
+  Import took 0.170333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Buket/obje/basketball_level.fbx
+  artifactKey: Guid(ffb8093a60d0fb842a2b3ff5a154d104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/obje/basketball_level.fbx using Guid(ffb8093a60d0fb842a2b3ff5a154d104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b13bd950ce3089a8d526ef84968cc862') in 0.120381 seconds 
+  Import took 0.122607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Buket/obje/top_harfler.fbx
+  artifactKey: Guid(9619bb69f668f124aa50a217eeee838b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/obje/top_harfler.fbx using Guid(9619bb69f668f124aa50a217eeee838b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5925221baf08cc0b2c54612dd40f0a5') in 0.393623 seconds 
+  Import took 0.396321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.079855 seconds.
+  path: Assets/Buket/obje/Tüp.fbx
+  artifactKey: Guid(f39f824a386e59d4cbc00d09e60c6721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/obje/Tüp.fbx using Guid(f39f824a386e59d4cbc00d09e60c6721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9166eb8bc57ff621112c6a6097cb23b7') in 0.029060 seconds 
+  Import took 0.031761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.618360 seconds.
+  path: Assets/Buket/Anim
+  artifactKey: Guid(7e4d3faf4732ff7458d42c4d0c516c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Buket/Anim using Guid(7e4d3faf4732ff7458d42c4d0c516c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23a98f4c25ce4f265d853f3fe71fb104') in 0.006651 seconds 
+  Import took 0.009413 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
